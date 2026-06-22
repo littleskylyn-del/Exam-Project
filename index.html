@@ -4,59 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Seyifunmi Weather App</title>
+    <title>Weather App</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header>
-      <h1>Seyifunmi Weather App</h1>
+    <div class="weather-app">
+      <header>
+        <h2>☁ Weather App</h2>
 
-      <div class="search-box">
-        <input type="text" id="cityInput" placeholder="Enter city name" />
+        <div class="search">
+          <input id="cityInput" placeholder="Enter city name" />
 
-        <button id="searchBtn">Search</button>
-      </div>
-    </header>
+          <button id="searchBtn">Search</button>
+        </div>
+      </header>
 
-    <main>
       <p id="loading"></p>
 
       <p id="error"></p>
 
-      <section class="hero">
-        <div class="weather-icon" id="icon">☀</div>
+      <section class="weather-card">
+        <div id="icon" class="icon">☀</div>
 
-        <h2 id="city">City Name</h2>
+        <h3 id="city">Lagos, Nigeria</h3>
 
-        <h1 id="temperature">--°C</h1>
+        <h1 id="temperature">32°C</h1>
 
-        <p id="description">Weather condition</p>
+        <p id="description">Sunny - Feels like 36°C</p>
       </section>
 
       <section class="stats">
         <div>
-          <h3>Humidity</h3>
+          <h4>Humidity</h4>
 
-          <p id="humidity">--%</p>
+          <p id="humidity">78%</p>
         </div>
 
         <div>
-          <h3>Wind Speed</h3>
+          <h4>Wind</h4>
 
-          <p id="wind">-- km/h</p>
+          <p id="wind">14 km/h</p>
         </div>
 
-        
+        <div>
+          <h4>UV Index</h4>
+
+          <p>High</p>
+        </div>
       </section>
 
       <section class="forecast">
-        <h2>5 Day Forecast</h2>
+        <h4>5-DAY FORECAST</h4>
 
-        <div id="forecastContainer" class="forecast-grid"></div>
+        <div id="forecastContainer"></div>
       </section>
-    </main>
+    </div>
 
     <script src="script.js"></script>
   </body>
