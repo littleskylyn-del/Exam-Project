@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #eef3f7;
+  background: #eef2f5;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,12 +14,14 @@ body {
 }
 
 .weather-app {
-  width: 380px;
+  width: 400px;
   background: white;
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 30px #ccc;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
+
+/* HEADER */
 
 header {
   background: #1a3c5e;
@@ -28,28 +30,29 @@ header {
 }
 
 header h2 {
-  font-size: 18px;
+  text-align: left;
   margin-bottom: 15px;
 }
 
 .search {
   display: flex;
-  gap: 8px;
+  gap: 5px;
 }
 
 .search input {
   flex: 1;
-  padding: 10px;
-  border-radius: 8px;
+  height: 35px;
+  border-radius: 6px;
   border: none;
+  padding: 10px;
 }
 
 .search button {
   background: #2e86ab;
-  border: none;
   color: white;
-  padding: 10px 15px;
-  border-radius: 8px;
+  border: none;
+  padding: 0 20px;
+  border-radius: 6px;
   cursor: pointer;
 
   transition: 0.2s;
@@ -59,15 +62,17 @@ header h2 {
   transform: scale(1.05);
 }
 
+/* HERO */
+
 .weather-card {
   background: #2e86ab;
   color: white;
   text-align: center;
-  padding: 35px 20px;
+  padding: 35px;
 }
 
 .icon {
-  font-size: 60px;
+  font-size: 55px;
 }
 
 .weather-card h1 {
@@ -75,20 +80,23 @@ header h2 {
   margin: 10px;
 }
 
+/* STATS */
+
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   background: white;
 }
 
 .stats div {
-  padding: 20px 5px;
   text-align: center;
+  padding: 18px;
   border-right: 1px solid #ddd;
 }
 
 .stats h4 {
-  font-size: 13px;
+  font-size: 12px;
   color: #777;
 }
 
@@ -97,13 +105,14 @@ header h2 {
   margin-top: 8px;
 }
 
+/* FORECAST */
+
 .forecast {
   padding: 20px;
 }
 
 .forecast h4 {
   font-size: 13px;
-  color: #555;
   margin-bottom: 15px;
 }
 
@@ -111,9 +120,13 @@ header h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background: #f4f7fb;
+
   padding: 14px;
+
   border-radius: 10px;
-  background: #f6f8fb;
+
   margin-bottom: 10px;
 
   transition: 0.2s;
@@ -126,7 +139,6 @@ header h2 {
 #error {
   color: red;
   text-align: center;
-  padding: 5px;
 }
 
 #loading {
